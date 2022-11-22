@@ -8,14 +8,11 @@
       :loading="loading"
       :message="message"
     ></speak-body>
-
-    <speak-footer :visitorId="visitorId"></speak-footer>
   </div>
 </template>
 
 <script lang="ts" setup>
 import SpeakBody from './components/speak-body.vue'
-import SpeakFooter from './components/speak-footer.vue'
 
 import { computed, inject, onMounted, reactive, ref } from 'vue'
 import { initOptions } from '@/types/parameter'

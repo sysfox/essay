@@ -1,13 +1,12 @@
 <template>
   <div class="speak-footer">
-    Powered by <a :href="homepage" target="_blank">iSpeak</a> v{{ version }}
     <SpeakLogin :visitorId="prosp.visitorId" v-if="userConfig.githubClientId" />
   </div>
 </template>
 
 <script setup lang="ts">
 import { inject, onMounted, PropType } from 'vue'
-import { version, homepage } from '../../../package.json'
+import { version } from '../../../package.json'
 import { initOptions } from '@/types/parameter'
 import SpeakLogin from './speak-login.vue'
 const prosp = defineProps({
